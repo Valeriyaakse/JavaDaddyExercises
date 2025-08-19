@@ -3,7 +3,7 @@ package mentorship.roadmap.Java_Core.step4_OOP.topic1_Person;
 public class Person {
     private String name;
     private int age;
-    Person (String name, int age) {
+    public Person (String name, int age) {
         this.name = name;
         this.age = age;
     }
@@ -25,6 +25,6 @@ public class Person {
     }
 
     public void displayInfo() {
-        System.out.println("Name: " + name + ", Age: " + age);
+        System.out.print("Name: " + name + ", Age: " + age);
     }
 }
