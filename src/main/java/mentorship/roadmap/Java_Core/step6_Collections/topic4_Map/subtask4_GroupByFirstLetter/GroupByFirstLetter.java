@@ -1,4 +1,4 @@
-package mentorship.roadmap.Java_Core.step6_Collections.topic4_Map.subtask7_GroupByLength;
+package mentorship.roadmap.Java_Core.step6_Collections.topic4_Map.subtask4_GroupByFirstLetter;
 
 import java.util.ArrayList;
 import java.util.HashMap;
