@@ -3,7 +3,6 @@ package mentorship.roadmap.Java_Core.step8_Multithereading.topic4_ProducerConsum
 public class Producer implements Runnable {
 
         private final Buffer buffer;
-    private volatile boolean running = true;
 
         public Producer(Buffer buffer) {
             this.buffer = buffer;
@@ -11,22 +10,12 @@ public class Producer implements Runnable {
 
         @Override
         public void run() {
-            int value = 0;
-            while (running) {
-                buffer.put(value++);
-                System.out.println("Produced " + (value - 1));
-                try {
-                    Thread.sleep(500);
-                } catch (InterruptedException e) {
-                    Thread.currentThread().interrupt();
-                    break;
-                }
+            for(int i = 0; i< buffer.getMAX_SIZE(); i++) {
+                buffer.add(i);
+                System.out.println("добавлен элемент  " + i);
             }
         }
 
-    public void stop() {
-        running = false;
-    }
 
     }
 

@@ -13,21 +13,7 @@ public class ProducerConsumerDemo {
 
         producerThread.start();
         consumerThread.start();
-        try {
-        Thread.sleep(5000);
 
-        producer.stop();
-        consumer.stop();
-
-        producerThread.interrupt();
-        consumerThread.interrupt();
-
-
-            producerThread.join();
-            consumerThread.join();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
     }
     }
 
