@@ -3,6 +3,9 @@ package mentorship.roadmap.Java_Core.step9_Test.topic1_Junit.task3_PasswordValid
 public class PasswordValidator {
 
     public static boolean isValid(String password) {
+        if (password == null) {
+            return false;
+        }
         return password.length() >= 8 && password.matches(".*\\d.*");
     }
 
